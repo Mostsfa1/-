@@ -1,0 +1,944 @@
+<!doctype html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>دفع </title>
+  <meta property="og:image" content="https://cdn.paymes.shop/eg/shop/media/5f075616-5b9c-4eee-bb2b-c9a007b13e70_thumbnail.jpg">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="1024">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://paymes.shop/dfaa-234284816?p=link">
+  <meta property="og:title" content="دفع ">
+  <meta property="og:description" content="دفع.                د.      ">
+  <link rel="stylesheet" type="text/css" href="/assets/css/style.css?v=1">
+  <link rel="stylesheet" type="text/css" href="/assets/css/stepbar.css">
+  <link rel="stylesheet" href="/assets/css/intlTelInput.css?v=2">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700&amp;display=swap" rel="stylesheet">
+  <style>
+            #soldSelf {
+                color: #D32F2F;
+                display: none;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 20px;
+                letter-spacing: 0.4000000059604645px;
+                text-align: left;
+            }
+            #wrongPhoneNumber {
+                color: #D32F2F;
+                display: none;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 20px;
+                letter-spacing: 0.4000000059604645px;
+                text-align: left;
+            }
+            .alert-danger {
+                background-color: #F7E6E6;
+                display: flex;
+                max-width: 600px;
+                margin: auto;
+                color: #D32F2F;
+                font-family: 'Inter', sans-serif;
+                border: none;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                text-align: center;
+                letter-spacing: 0.15px;
+                background: rgba(211, 47, 47, 0.1);
+                border-radius: 8px;
+            }
+            .alert {
+                display: none;
+                position: fixed;
+                opacity: 1;
+                top:10%;
+                right:0px !important;
+                transform: translate(-5%, -5%);
+                z-index: 99999;
+                width:250px;
+                animation: alertAnimation 3s linear infinite alternate;
+            }
+            @keyframes alertAnimation {
+                0%{
+                    opacity: 0;
+                }
+                5% {
+                    opacity: 1;
+                }
+
+                95% {
+                    opacity: 1;
+                }
+
+                100% {
+                    opacity: 0;
+                }
+            }
+
+
+            .holiday_overlay {
+                position: fixed;
+                width: 100vw;
+                height: 100vh;
+                top: 0;
+                left: 0;
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 61.46%, #FFFFFF 100%);
+                backdrop-filter: blur(2px);
+                z-index: 9999;
+            }
+            .prod-detail .prod-price {
+                height: 42px;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 34px;
+                line-height: 123.5%;
+                letter-spacing: 0.25px;
+                color: #24D05D;
+                flex: none;
+                order: 1;
+                flex-grow: 0;
+            }
+
+            .add-to-cart-button {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .add-to-cart-button:hover {
+                background-color: #009D30;
+            }
+
+            .add-to-cart-button span {
+                max-width: 100%;
+                margin-right: 8px;
+                color: #00002A;
+            }
+
+            .input-group * {
+                border-radius: 0;
+                background: transparent;
+                border: 0;
+                color: #00002A;
+            }
+
+            .add-to-cart-counter {
+                min-height: 49px;
+                display: flex;
+                align-items: center;
+                border: 1px solid #ced4da;
+                border-radius: 16px;
+                padding-left: 10px;
+                padding-right: 10px;
+                width: auto;
+                max-width: 124px;
+            }
+
+            .add-to-cart-counter input {
+                min-width:
+            }
+
+            .add-to-cart-counter input:focus {
+                box-shadow: none !important;
+            }
+
+            .add-to-cart-counter .input-group-public a {
+                margin-top: 5px;
+            }
+
+            .add-to-cart-counter .input-group-public a span {
+                border-radius: 100%;
+                align-self: center;
+                width: 30px;
+                height: 30px;
+                font-size: 30px;
+                text-align: center;
+                transition: .3s ease-in-out all;
+                padding-left: 8px;
+            }
+
+            .add-to-cart-counter .input-group-prepend a span {
+                align-self: center;
+                margin: auto;
+
+            }
+
+            .add-to-cart-counter .input-group-public a:hover {
+                text-decoration: none;
+                align-items: center;
+            }
+
+            .add-to-cart-counter .input-group-public a:hover span {
+                background: #474e805e;
+                align-items: center;
+            }
+
+            .add-to-cart-counter .input-group-public a:focus span {
+                background: #00002A;
+                align-items: center;
+                color: #fff;
+            }
+
+            .isDisabled {
+                pointer-events: none;
+            }
+
+            .btn-add {
+                width: 100%;
+            }
+
+            footer {
+                position: relative;
+                bottom: 0;
+            }
+
+            @media only screen and (max-width: 992px) {
+                footer {
+                    position: relative;
+                    bottom: 0;
+                }
+            }
+
+
+            @media only screen and (max-width: 727px) {
+                .s-block {
+                    width: 50% !important;
+                }
+
+            }
+
+            .dropdown_feature {
+                width: 100%;
+                padding-left: 10px;
+                margin-bottom: 24px;
+            }
+
+
+            .top-block .turn-back {
+                color: #192653;
+                letter-spacing: 0.5px;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 203px;
+                height: 48px;
+                text-decoration: none;
+            }
+            .top-block .turn-back:hover {
+                background-color: white;
+                cursor:pointer;
+            }
+
+            .prod-desc {
+                display: block;
+                height: 6rem;
+                overflow-y: auto;
+                word-break: break-all;
+            }
+
+            .stickybar {
+                position: -webkit-sticky;
+                position: fixed;
+                padding-top: 8px;
+                top: 0;
+                background-color: #FFFFFF;
+                box-shadow: 0px 8px 12px 6px rgba(170, 170, 200, 0.15), 0px 4px 4px rgba(170, 170, 200, 0.3);
+                height: 56px;
+                font-family: 'Inter', sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                display: none;
+                align-items: center;
+                letter-spacing: 0.15px;
+                color: rgba(0, 0, 42, 0.87);
+                z-index: 11111;
+
+            }
+
+            .price-mobile {
+                font-family: 'Inter', sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                display: flex;
+                align-items: center;
+                text-align: right;
+                letter-spacing: 0.15px;
+                color: #24D05E;
+            }
+
+            .stickybarOpen {
+                position: -webkit-sticky;
+                z-index: 1111111;
+                position: fixed;
+                height: 274px;
+                top: 0;
+                background-color: #FFFFFF;
+                box-shadow: 0px 8px 12px 6px rgba(170, 170, 200, 0.15), 0px 4px 4px rgba(170, 170, 200, 0.3);
+                font-family: 'Inter', sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                align-items: center;
+                letter-spacing: 0.15px;
+                color: rgba(0, 0, 42, 0.87);
+                display: none;
+            }
+
+            .stickyimg {
+                margin-right: 8px;
+                max-width: 40px;
+                max-height: 40px;
+                border-radius: 8px;
+
+            }
+
+            .stickyimgOpen {
+                max-width: 160px;
+                max-height: 160px;
+                border-radius: 8px
+            }
+
+            .stickybarOpen-title {
+                padding-right: 8px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                max-width: 150px;
+            }
+
+            .tooltip-inner {
+                background-color: rgba(0, 0, 42, 0.54);;
+            }
+
+            .tooltip.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.bs-tooltip-bottom .arrow::before {
+                border-bottom-color: rgba(0, 0, 42, 0.54);;
+            }
+
+            .alert-danger {
+                background-color: #F7E6E6;
+                display: flex;
+                max-width: 600px;
+                margin: auto;
+                color: #D32F2F;
+                font-family: 'Inter', sans-serif;
+                border: none;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                text-align: center;
+                letter-spacing: 0.15px;
+                background: rgba(211, 47, 47, 0.1);
+                border-radius: 8px;
+            }
+            .alert {
+                        display: none;
+                        position: fixed;
+                        opacity: 1;
+                        top:10%;
+                        right:0px !important;
+                        transform: translate(-5%, -5%);
+                        z-index: 9999;
+                        width:250px;
+                        animation: alertAnimation 3s linear infinite alternate;
+                    }
+                    @keyframes alertAnimation {
+                                0%{
+                                    opacity: 0;
+                                }
+                                5% {
+                                    opacity: 1;
+                                }
+
+                                95% {
+                                    opacity: 1;
+                                }
+
+                                100% {
+                                    opacity: 0;
+                                }
+                            }
+
+
+
+                      
+
+                            @media only screen and (max-width: 576px) {
+                                .for_mobil_version_15{
+                                    padding-top: 65px !important;
+                                }
+                                
+                                #disabledHolidayMode{
+                                margin-top:0px;
+                            }
+
+                          
+
+                                
+                            }
+                            #disabledHolidayMode{
+                                margin-top:80px;
+                            }
+
+                          
+
+        </style>
+ </head>
+ <body style="min-height: 100vh;display: flex; flex-direction: column; justify-content: space-between;">
+  <div style="        display: flex;
+    z-index: 999999 !important;
+    position: absolute !important;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20vh;
+    flex-direction: column;
+    /* border: none;">
+  </div>
+  <div class="container">
+   <br>
+   <div class="container progressBox">
+    <div class="dropdown d-flex justify-content-end">
+     <form id="language">
+      <select id="languageId" name="lng" data-lang-selector class="form-control-sm"> <option value="ar" data-value="ar">AR </option> <option value="az" data-value="az">AZ </option> <option selected value="en" data-value="en">EN </option> <option value="tr" data-value="tr">TR </option> </select>
+     </form>
+    </div>
+    <div class="progress_bar d-flex justify-content-center mx-auto">
+     <div class="step d-flex align-items-center m-auto">
+      <div class="pointer">
+       1
+      </div>
+      <div class="step-info">
+       Shipping Info
+      </div>
+     </div>
+     <hr style="margin-inline:8px;width:40px;text-align:left;">
+     <div class="step step-deactive d-flex align-items-center m-auto">
+      <div class="pointer pointer-deactive">
+       2
+      </div>
+      <div class="step-info step-info-deactive">
+       Payment Info
+      </div>
+     </div>
+     <hr style="margin-inline:8px; width:40px;text-align:left;">
+     <div class="step d-flex align-items-center m-auto">
+      <div class="pointer pointer-deactive">
+       3
+      </div>
+      <div class="step-info step-info-deactive">
+       Order Completed
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="row mx-auto d-flex justify-content-center " id="disabledHolidayMode">
+    <div class="col-md-12 stickybar" id="stickybar">
+     <div class="d-flex align-items-center">
+      <img src="https://cdn.paymes.shop/eg/shop/media/5f075616-5b9c-4eee-bb2b-c9a007b13e70_thumbnail.jpg" class="img-fluid stickyimg" id="stickyimg" style=" ">
+      <div style="padding-right: 8px; overflow: hidden;white-space: nowrap;text-overflow: ellipsis;max-width: 150px;">
+       دفع
+      </div><span class="price-mobile">11.00 EGP</span>
+      <div class="d-flex ml-auto">
+       <button class="stickybar-btn" type="button" style="border: none; background: white" onclick="openDetail();">
+        <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path fill-rule="evenodd" clip-rule="evenodd" d="M1.51089 4.84414C1.74757 4.60746 2.1313 4.60746 2.36798 4.84414L8.00004 10.4762L13.6321 4.84414C13.8688 4.60746 14.2525 4.60746 14.4892 4.84414C14.7259 5.08082 14.7259 5.46455 14.4892 5.70124L8.42859 11.7618C8.19191 11.9985 7.80817 11.9985 7.57149 11.7618L1.51089 5.70124C1.2742 5.46455 1.2742 5.08082 1.51089 4.84414Z" fill="black" />
+        </svg></button>
+      </div>
+     </div>
+    </div>
+    <div class="col-md-12 stickybarOpen" id="stickybarOpen">
+     <div class="d-flex" style="padding-top: 8px">
+      <div class="checkout-title" id="checkout-title" style="font-size: 16px">
+       Total Price
+      </div>
+      <div class="d-flex ml-auto">
+       <button class="stickybar-btn" type="button" style="border: none; background: white" onclick="closeBar();">
+        <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path fill-rule="evenodd" clip-rule="evenodd" d="M14.4892 11.1559C14.2525 11.3925 13.8688 11.3925 13.6321 11.1559L8.00002 5.52381L2.36796 11.1559C2.13128 11.3925 1.74755 11.3925 1.51087 11.1559C1.27418 10.9192 1.27418 10.5354 1.51087 10.2988L7.57147 4.23816C7.80815 4.00148 8.19189 4.00148 8.42857 4.23816L14.4892 10.2988C14.7259 10.5354 14.7259 10.9192 14.4892 11.1559Z" fill="black" />
+        </svg></button>
+      </div>
+     </div><span class="price-mobile mb-2" style="font-size: 24px">11.00 EGP</span>
+     <div class="d-flex align-items-center">
+      <img src="https://cdn.paymes.shop/eg/shop/media/5f075616-5b9c-4eee-bb2b-c9a007b13e70_thumbnail.jpg" class="img-fluid stickyimgOpen" id="stickyimgOpen">
+      <div class="stickybarOpen-title pl-4">
+       دفع 
+       <h6 class="prod-desc" style="font-size:13px; height: 120px; padding-top: 0; overflow-y:hidden">دفع. د.</h6>
+      </div>
+     </div>
+    </div>
+    <div class="col-md-6 checkout-product">
+     <figure class="checkout-card card-product for_mobil_version_15">
+      <div class="img-wrap">
+       <img src="https://cdn.paymes.shop/eg/shop/media/5f075616-5b9c-4eee-bb2b-c9a007b13e70_thumbnail.jpg" class="img-fluid" style="display: table;margin: auto;">
+      </div>
+      <figcaption class="info-wrap">
+       <h4 class="prod-title">دفع</h4>
+      </figcaption>
+      <figcaption class="info-wrap">
+       <h6 class="prod-desc" style="font-size:13px;">دفع. د.</h6>
+      </figcaption>
+      <div class="payment-price" style="display:block !important;">
+       Total Price
+      </div>
+      <div class="bottom-wrap" style="display:block !important;">
+       <div class="price-wrap h5">
+        <span class="price-price">11.00 <span class="currency"> EGP</span></span>
+       </div>
+      </div>
+      <form id="formId" onsubmit="formSubmit()" action="?link=dfaa-234284816-&amp;id=234284816&amp;p=link" method="POST">
+       <input type="hidden" name="dialCodeCountry">
+      </form>
+     </figure>
+    </div>
+    <div class="col-md-6 checkout-form">
+     <div class="checkout-panel" id="checkout-form">
+      <div class>
+       <input hidden readonly type="text" class="form-control" id="turr" name="turr" value="0">
+       <div class="row pt-2">
+        <div class="col-md-12 checkout-box2">
+         <div class="checkout-title mb-3">
+          Customer Information
+         </div>
+         <div class="material-field">
+          <div class="comment-input">
+           <input type="email" class="form-control material-field-input" style="height: auto; margin-bottom: 8px;width: 100%" name="email" required value> <label class="comment-label">Email Address</label>
+          </div>
+         </div>
+        </div>
+        <div class="col-md-12 mb-5" style="margin-bottom: 6px !important;">
+         <div class="material-field">
+          <input style="height: auto; width:100%" type="text" placeholder="5012345678" class="form-control material-field-input" id="smstelno" required maxlength="15" value> <input id="phoneInput" type="hidden" name="telefon" required>
+          <p id="soldSelf">You can't sell to yourself</p>
+          <p id="wrongPhoneNumber">Invalid phone number</p>
+         </div>
+        </div>
+       </div>
+       <div class="row pt-2 individual-panel" id="individual-panel">
+        <div class="col-md-6 checkout-box" style="padding-right: 15px !important;">
+         <div class="material-field">
+          <div class="comment-input">
+           <input id="outline-input" pattern="^(?=.{3,30}$)(?![.])(?:(?!(.)\1{2})[. \S])+$" type="text" class="form-control material-field-input" style="height: auto; margin-bottom: auto; width: 100%" name="ad" required value> <label class="comment-label">Name</label>
+          </div>
+         </div>
+        </div>
+        <div class="col-md-6 checkout-box2">
+         <div class="material-field">
+          <div class="comment-input">
+           <input pattern="^(?=.{3,30}$)(?![.])(?:(?!(.)\1{2})[. \S])+$" type="text" class="form-control material-field-input" style="height: auto;margin-bottom: auto;width: 100%" name="soyad" required value> <label class="comment-label">Surname</label>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="row pt-2" style="display:none;" id="corporate-panel">
+        <div class="col-md-12 checkout-title mb-3" style="padding-left: 14px !important;">
+         Company Information
+        </div>
+        <div class="col-md-12">
+         <div class="material-field">
+          <div class="comment-input">
+           <input type="text" class="form-control material-field-input" style="height: auto; margin-bottom: 8px; width: 100%" name="firma_adi" value> <label class="comment-label">Company Name</label>
+          </div>
+         </div>
+        </div>
+        <div class="col-md-6 checkout-box" style="padding-right: 15px !important;">
+         <div class="material-field">
+          <div class="comment-input">
+           <input type="text" class="form-control material-field-input" style="height: auto; margin-bottom: 1px; width: 100%" name="vkn" maxlength="10" id="vkn" value> <label class="comment-label">Tax Identification Number</label>
+          </div>
+         </div>
+        </div>
+        <div class="col-md-6 checkout-box2">
+         <div class="material-field">
+          <div class="comment-input">
+           <input type="text" class="form-control material-field-input" name="vergi_dairesi" style="margin-bottom: 1px;height: auto;  width: 100%" value> <label class="comment-label">Tax Administration</label>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="row pt-2">
+        <div class="col-md-12">
+        </div>
+        <div class="col-md-12">
+         <div class="material-field">
+          <div class="comment-input">
+           <label class="comment-label" for="comment">Do you have any note to the merchant? (Optional)</label> <input type="text" class="form-control material-field-input commentfrombuyer" style="width: 100%;height: auto; margin-bottom: 8px;" name="comment" id="comment" value>
+          </div>
+         </div>
+        </div>
+       </div><button id="payButton" class="btn w-100 mt-2 checkout-btn" type="submit">
+        <div>
+         Pay 
+         <svg width="11" height="12" viewbox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.49996 0.666687L4.55996 1.60669L8.27996 5.33335H0.166626V6.66669H8.27996L4.55996 10.3934L5.49996 11.3334L10.8333 6.00002L5.49996 0.666687Z" fill="white" />
+         </svg>
+        </div></button>
+      </div>
+      <div class="secure">
+       <svg width="25" height="24" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.5 2L4.5 5V11.09C4.5 16.14 7.91 20.85 12.5 22C17.09 20.85 20.5 16.14 20.5 11.09V5L12.5 2ZM11.44 15.54L7.9 12L9.31 10.59L11.43 12.71L15.67 8.47L17.08 9.88L11.44 15.54Z" fill="#24D05E" />
+       </svg>
+       <div class="secure_title">
+        Secure Payments by Paymes
+       </div><a href="#" data-toggle="tooltip" data-placement="bottom" title="You are making a secure payment on Paymes PayTabs social commerce platform.">
+        <svg width="25" height="24" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M11.5 18H13.5V16H11.5V18ZM12.5 2C6.98 2 2.5 6.48 2.5 12C2.5 17.52 6.98 22 12.5 22C18.02 22 22.5 17.52 22.5 12C22.5 6.48 18.02 2 12.5 2ZM12.5 20C8.09 20 4.5 16.41 4.5 12C4.5 7.59 8.09 4 12.5 4C16.91 4 20.5 7.59 20.5 12C20.5 16.41 16.91 20 12.5 20ZM12.5 6C10.29 6 8.5 7.79 8.5 10H10.5C10.5 8.9 11.4 8 12.5 8C13.6 8 14.5 8.9 14.5 10C14.5 12 11.5 11.75 11.5 15H13.5C13.5 12.75 16.5 12.5 16.5 10C16.5 7.79 14.71 6 12.5 6Z" fill="#192653" />
+        </svg></a>
+      </div>
+     </div>
+    </div>
+   </div>
+   <footer class="my-5 pt-4 pb-3 text-muted text-center text-small">
+    <div class="container footer-text">
+     <img src="https://cdn.paymes.shop/assets/paymes-logo.svg" class="footer-logo pr-4"> Copyright © Paymes
+    </div>
+   </footer>
+  </div>
+  <script src="/assets/js/libs.js"></script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon="{&quot;rayId&quot;:&quot;81e62c1d5eab0daa&quot;,&quot;b&quot;:1,&quot;version&quot;:&quot;2023.10.0&quot;,&quot;token&quot;:&quot;05676ec6c3b24120b86557038c6ad724&quot;}" crossorigin="anonymous"></script>
+  <script src="/assets/js/plugins.js"></script>
+  <script src="/assets/js/script.js"></script>
+  <script src="/assets/js/intlTelInput-jquery.min.js"></script>
+  <script type="text/javascript">
+
+        $(document).on('ready', function () {
+            $('#smstelno').intlTelInput({
+                initialCountry: 'eg',
+                separateDialCode: true,
+                autoHideDialCode: false,
+                rtl: true
+            })
+        })
+
+
+    </script>
+  <script>
+
+        
+        function formSubmit() {
+            let form = $('#formId')
+            let number = $('#smstelno');
+            let hidden = $('#phoneInput');
+            document.querySelector('#payButton').disabled = true;
+            hidden.val(number.intlTelInput('getSelectedCountryData').dialCode + number.val());
+            $('input[name=dialCodeCountry]').val(number.intlTelInput('getSelectedCountryData').iso2);
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'add_shipping_info',
+                'ecommerce': {
+                    'currency': 'null',
+                    'value': '',
+                    'items':[
+                                                    {
+                                'item_id': '234284816',
+                                'item_name': 'دفع ',
+                                'price': '11.00',
+                                'quantity': 1,
+                                'item_variant': 'null',
+                                'item_brand': 'product',
+                                'currency': 'EGP',
+                            },
+                                                ]
+                }
+            });
+            form.submit();
+        }
+
+        $('select[data-lang-selector]').on('change', function () {
+            let url = new URL(window.location.href);
+            url.searchParams.set('lng', $(this).val());
+            window.location.href = url.toString();
+        })
+
+        const commentInput = document.getElementById('comment');
+        const comment_lbl = document.getElementById('comment-lbl');
+        commentInput.addEventListener('input', updateValue);
+
+        function updateValue(e) {
+            if (e.target.value.length > 0) {
+                comment_lbl.classList.add("a");
+                comment_lbl.classList.remove("comment-label");
+            }
+        }
+
+
+        function selectChange(val) {
+            $('#language').submit();
+        }
+
+
+        function x(x) {
+            if (x == 0) {
+                document.querySelector('#bireysel-tab').classList.add('active');
+                document.querySelector('#kurumsal-tab').classList.remove('active');
+                document.getElementById("individual-panel").style.display = "flex";
+                document.getElementById("corporate-panel").style.display = "none";
+                document.getElementById("turr").value = '0';
+
+            } else if (x == 1) {
+                document.querySelector('#bireysel-tab').classList.remove('active');
+                document.querySelector('#kurumsal-tab').classList.add('active');
+                document.getElementById("individual-panel").style.display = "none";
+                document.getElementById("corporate-panel").style.display = "flex";
+                document.getElementById("turr").value = '1';
+
+            }
+
+        }
+
+        $('a[data-tab-button]').on('click', function () {
+            let type = $(this).attr('data-tab-button'); // Get type from clicked button
+            let corporatePanel = $('#corporate-panel'); // Assing Corporate Input Panel
+            let individualPanel = $('#individual-panel'); // Assing Individual Input Panel
+            $('a[data-tab-button]').removeClass('active'); // Remove all active assignments.
+            $(this).addClass('active'); // Add active class to clicked button
+            if (type === 'individual') {
+                $('#turr').val('0'); // Change type in form to indiviudal (0)
+                corporatePanel.hide()
+                individualPanel.show();
+                corporatePanel.find('input').attr('required', false);
+                corporatePanel.find('select').attr('required', false);
+                individualPanel.find('input').attr('required', true);
+                individualPanel.find('select').attr('required', true);
+            } else if (type === 'corporate') {
+                $('#turr').val('1');  // Change type in form to indiviudal (1)
+                corporatePanel.show()
+                individualPanel.hide();
+                corporatePanel.find('input').attr('required', true);
+                corporatePanel.find('select').attr('required', true);
+                individualPanel.find('input').attr('required', false);
+                individualPanel.find('select').attr('required', false);
+            } else {
+                alert('Undefined Button Type');
+            }
+        })
+
+
+        function img() {
+            if (document.getElementById('istckn').checked) {
+                document.getElementById("tckn").value = "";
+                document.getElementById("tckn").disabled = true;
+            } else {
+                document.getElementById("tckn").disabled = false;
+            }
+
+        }
+
+        function degisim(value) {
+            if (value) {
+                komisyon = 0;
+                value = value.replace(',', '.');
+                document.getElementById('hizmet_fiyat').hidden = false;
+                document.getElementById('paymes_hizmet').hidden = false;
+                document.getElementById('toplam_hizmet').hidden = false;
+                if (komisyon == 1) {
+                    x = parseFloat(value) * 1.99 / 100;
+                    x2 = parseFloat(value) + (parseFloat(value) * 1.99 / 100);
+                } else {
+                    x = 0;
+                    x2 = value;
+                }
+
+                document.getElementById('hizmet_fiyat').innerHTML = "Hizmet Fiyatı: " + formatAsMoney(value) + ' TL';
+                document.getElementById('paymes_hizmet').innerHTML = "Paymes Hizmet Bedeli: " + formatAsMoney(x) + ' TL';
+                document.getElementById('toplam_hizmet').innerHTML = "Toplam Tutar: " + formatAsMoney(x2) + ' TL';
+                document.getElementById('alici_fiyat2').value = formatAsMoney(x2);
+            } else {
+
+                document.getElementById('hizmet_fiyat').hidden = true;
+                document.getElementById('paymes_hizmet').hidden = true;
+                document.getElementById('toplam_hizmet').hidden = true;
+                document.getElementById('alici_fiyat2').value = 0;
+
+            }
+        }
+
+
+        function postman(url, parameters, callback) {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    callback(xhr.response);
+                }
+            }
+            xhr.open('POST', url, true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.send(parameters);
+        }
+
+        function formatAsMoney(n) {
+            return parseFloat(n).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1').replace(/\.(\d+)$/, ',$1');
+        }
+
+                function getDistricts(citySelect) {
+            const districtSelect = document.getElementById('district');
+            const parameters = "cityCode=" + citySelect.value + "&type=getDistrict";
+            postman('/ajax.php', parameters, function (res) {
+                districtSelect.innerHTML = res;
+            })
+        }
+
+
+        $(document).ready(function () {
+
+            $(".form-control").click(function () {
+                $(this).parent().addClass("label-animate");
+            });
+
+            $(window).click(function () {
+                if (!$(event.target).is('.form-control')) {
+                    $(".form-control").each(function () {
+                        if ($(this).val() == '') {
+                            $(this).parent().removeClass("label-animate");
+                        }
+                    });
+                }
+            });
+        });
+
+    </script>
+  <script>
+        $(window).scroll(function() {
+            if ($(window).width() <= 767) {
+                if ($(this).scrollTop() > 300) {
+                    $('.stickybar').fadeIn();
+                } else {
+                    $('.stickybar').fadeOut();
+                }
+            }
+        });
+
+
+        function openDetail() {
+
+            var element = document.getElementById("stickybar");
+            element.classList.add("stickybarOpen");
+            document.getElementById("stickybarOpen").style.display = "block";
+        }
+
+        function closeBar() {
+            document.getElementById("stickybarOpen").style.display = "none";
+            var element = document.getElementById("stickybar");
+            element.classList.remove("stickybarOpen");
+        }
+    </script>
+  <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+        $(document).ready(function () {
+            const inputLength = document.getElementsByClassName("material-field-input");
+            const commentLabel = document.getElementsByClassName("comment-label");
+            for (var i = 0; i < inputLength.length; i++) {
+                if (inputLength[i].value.length > 0) {
+                    for (var j = 0; j < commentLabel.length; j++) {
+                        commentLabel[i].style.transform = "scale(0.75) translate(-13px, -30px)";
+                    }
+                }
+            }
+        });
+
+        var list = document.querySelectorAll("#checkout-form input");
+        list.forEach(item => {
+            item.addEventListener("focus", () => {
+                item.nextElementSibling.style.transform = "scale(0.75) translate(-13px, -30px)";
+                item.nextElementSibling.style.color = "rgba(0, 0, 42, 0.87)";
+            })
+        })
+
+        var list2 = document.querySelectorAll("#checkout-form textarea");
+        list2.forEach(item => {
+            item.addEventListener("focus", () => {
+                item.nextElementSibling.style.transform = "scale(0.75) translate(-13px, -30px)";
+                item.nextElementSibling.style.color = "rgba(0, 0, 42, 0.87)";
+            })
+        })
+    </script>
+  <script>
+    </script>
+  <script>
+    $(document).ready(function() {
+
+        let smsTelNoInput = document.getElementById('smstelno');
+        smsTelNoInput.addEventListener('input',updateValue);
+        function updateValue(e) {
+            let soldSelf = "01206319848";
+
+            if(soldSelf === e.target.value || e.target.value.includes(soldSelf)){
+                let payButton = document.getElementById('payButton');
+                payButton.disabled = true;
+                payButton.style.background = '#192653';
+                document.getElementById('soldSelf').style.display = 'flex';
+                document.getElementById('wrongPhoneNumber').style.display = 'none';
+
+            }
+             else if(e.target.value.includes(' ')) {
+                 if(e.target.value.replace(/\s/g, '') == soldSelf || e.target.value.replace(/\s/g, '').includes(soldSelf)){
+                     let payButton = document.getElementById('payButton');
+                     payButton.disabled = true;
+                     payButton.style.background = '#192653';
+                     document.getElementById('wrongPhoneNumber').style.display = 'none';
+                     document.getElementById('soldSelf').style.display = 'flex';
+                 }
+                 else {
+
+                     let payButton = document.getElementById('payButton');
+                     payButton.disabled = false;
+                     payButton.style.background = '#192653';
+                     document.getElementById('wrongPhoneNumber').style.display = 'none';
+                     document.getElementById('soldSelf').style.display = 'none';
+                 }
+            }
+
+            else {
+                document.getElementById('wrongPhoneNumber').style.display = 'none';
+                document.getElementById('payButton').disabled = false;
+                document.getElementById('soldSelf').style.display = 'none';
+                let payButton = document.getElementById('payButton');
+                payButton.onmouseover = () => {
+                    document.getElementById('payButton').style.background  = '#4359A9';
+                }
+                payButton.onmouseout = () => {
+                    document.getElementById('payButton').style.background  = '#192653';
+                }
+            }
+        }
+
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'view_cart',
+            'ecommerce': {
+                'value': '',
+                'currency': 'null',
+                'items':[
+                                                {
+                                'item_id': '234284816',
+                                'item_name': 'دفع ',
+                                'price': '11.00',
+                                'quantity': '1',
+                                'item_variant': 'null',
+                                'item_brand': 'product',
+                                'currency': 'EGP',
+                            },
+                                            ]
+            }
+        });
+    });
+</script>
+ </body>
+</html>
